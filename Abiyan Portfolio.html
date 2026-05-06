@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abiyan Essa | Scholarship Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap');
+        
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            scroll-behavior: smooth;
+            background-color: #0f172a;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .glass-card:hover {
+            transform: translateY(-8px);
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(59, 130, 246, 0.4);
+            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #60a5fa 0%, #c084fc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-bg {
+            background: radial-gradient(circle at 80% 20%, rgba(59, 130, 246, 0.15), transparent 40%),
+                        radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0.1), transparent 40%);
+        }
+
+        .section-fade {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .section-fade.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .progress-bar {
+            height: 6px;
+            border-radius: 3px;
+            background: rgba(255, 255, 255, 0.1);
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+            transition: width 1.5s ease-in-out;
+        }
+    </style>
+</head>
+<body class="text-slate-300">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-[#0f172a]/90 backdrop-blur-lg border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <span class="text-xl font-bold tracking-tight text-white flex items-center">
+                <span class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center mr-2 text-sm">AE</span>
+                ABIYAN<span class="text-blue-500">ESSA</span>
+            </span>
+            <div class="hidden md:flex items-center space-x-10 text-sm font-semibold">
+                <a href="#about" class="hover:text-blue-400 transition-colors uppercase tracking-wider">Academics</a>
+                <a href="#projects" class="hover:text-blue-400 transition-colors uppercase tracking-wider">Projects</a>
+                <a href="#skills" class="hover:text-blue-400 transition-colors uppercase tracking-wider">Skills</a>
+                <a href="tel:+971529172182" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-full transition-all transform hover:scale-105 active:scale-95 shadow-lg shadow-blue-600/20">
+                    Contact Me
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-bg min-h-screen flex items-center pt-20 px-6">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+            <div class="section-fade">
+                <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-bold mb-6 tracking-widest uppercase">
+                    <span class="relative flex h-2 w-2">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+                    </span>
+                    <span>RAK Academy Grade 9 Candidate</span>
+                </div>
+                <h1 class="text-6xl lg:text-8xl font-extrabold text-white mb-8 leading-[1.1] tracking-tight">
+                    Innovating <br/><span class="gradient-text">Through Code.</span>
+                </h1>
+                <p class="text-xl text-slate-400 mb-10 max-w-xl leading-relaxed">
+                    A self-taught full-stack developer blending academic rigor with a passion for building functional, user-centric software solutions.
+                </p>
+                <div class="flex flex-wrap gap-5">
+                    <a href="#projects" class="px-10 py-4 bg-white text-slate-900 font-bold rounded-xl hover:bg-blue-50 transition-all shadow-xl">Explore Projects</a>
+                    <a href="#about" class="px-10 py-4 bg-slate-800 text-white font-bold rounded-xl border border-slate-700 hover:bg-slate-700 transition-all">Academic Record</a>
+                </div>
+            </div>
+            
+            <div class="relative section-fade">
+                <div class="absolute -inset-10 bg-blue-600/20 blur-[120px] rounded-full opacity-50"></div>
+                <div class="relative glass-card p-10 rounded-3xl border border-white/10 shadow-2xl">
+                    <div class="flex items-center justify-between mb-8">
+                        <div class="flex space-x-2">
+                            <div class="w-3 h-3 rounded-full bg-red-500/80"></div>
+                            <div class="w-3 h-3 rounded-full bg-yellow-500/80"></div>
+                            <div class="w-3 h-3 rounded-full bg-green-500/80"></div>
+                        </div>
+                        <span class="text-[10px] font-mono text-slate-500 tracking-widest uppercase">profile_core.json</span>
+                    </div>
+                    <div class="font-mono text-sm space-y-3">
+                        <p><span class="text-purple-400">const</span> <span class="text-blue-400">candidate</span> = {</p>
+                        <p class="ml-4"><span class="text-slate-300">fullName:</span> <span class="text-emerald-400">"Muhammad Abiyan Essa"</span>,</p>
+                        <p class="ml-4"><span class="text-slate-300">targetGrade:</span> <span class="text-amber-400">9</span>,</p>
+                        <p class="ml-4"><span class="text-slate-300">itConsistency:</span> <span class="text-emerald-400">"95% (3-year avg)"</span>,</p>
+                        <p class="ml-4"><span class="text-slate-300">primaryLanguage:</span> <span class="text-emerald-400">"English"</span>,</p>
+                        <p class="ml-4"><span class="text-slate-300">projects:</span> [<span class="text-emerald-400">"AURA"</span>, <span class="text-emerald-400">"CineFlix"</span>]</p>
+                        <p>};</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Academic Journey -->
+    <section id="about" class="py-32 px-6 bg-slate-900/50">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-20 items-center">
+                <div class="section-fade">
+                    <h2 class="text-4xl font-extrabold text-white mb-8">Academic Consistency</h2>
+                    <p class="text-lg text-slate-400 mb-10 leading-relaxed">
+                        My educational journey is defined by a commitment to excellence across disciplines. While my passion lies in technology, I have maintained high standards in English, Social Sciences, and the Physical Sciences.
+                    </p>
+                    
+                    <div class="space-y-10">
+                        <div>
+                            <div class="flex justify-between mb-3 items-end">
+                                <span class="text-sm font-bold text-slate-200">Grade 7 Performance (Peak)</span>
+                                <span class="text-xs font-mono text-blue-400">88.7% Aggregate</span>
+                            </div>
+                            <div class="progress-bar"><div class="progress-fill" style="width: 88.7%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-3 items-end">
+                                <span class="text-sm font-bold text-slate-200">Information Technology Mastery</span>
+                                <span class="text-xs font-mono text-blue-400">95% Average</span>
+                            </div>
+                            <div class="progress-bar"><div class="progress-fill" style="width: 95%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-3 items-end">
+                                <span class="text-sm font-bold text-slate-200">English Proficiency</span>
+                                <span class="text-xs font-mono text-blue-400">Distinction</span>
+                            </div>
+                            <div class="progress-bar"><div class="progress-fill" style="width: 92%"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-6 section-fade">
+                    <div class="glass-card p-8 rounded-3xl border-l-4 border-l-blue-500">
+                        <div class="text-4xl font-black text-white mb-2">15%</div>
+                        <p class="text-xs font-bold text-blue-400 uppercase tracking-widest">Ei ASSET Top Percentile</p>
+                        <p class="text-[10px] text-slate-500 mt-2 italic">Qualified for Ei Talent Search 2024-25</p>
+                    </div>
+                    <div class="glass-card p-8 rounded-3xl border-l-4 border-l-purple-500">
+                        <div class="text-4xl font-black text-white mb-2">49/50</div>
+                        <p class="text-xs font-bold text-purple-400 uppercase tracking-widest">Social Science Record</p>
+                        <p class="text-[10px] text-slate-500 mt-2 italic">Grade 8 Academic Year</p>
+                    </div>
+                    <div class="glass-card p-8 rounded-3xl border-l-4 border-l-emerald-500">
+                        <div class="text-4xl font-black text-white mb-2">A+</div>
+                        <div class="text-xs font-bold text-emerald-400 uppercase tracking-widest">Consistent IT Grade</div>
+                        <p class="text-[10px] text-slate-500 mt-2 italic">3 Consecutive Years</p>
+                    </div>
+                    <div class="glass-card p-8 rounded-3xl border-l-4 border-l-amber-500">
+                        <div class="text-4xl font-black text-white mb-2">50/50</div>
+                        <div class="text-xs font-bold text-amber-400 uppercase tracking-widest">Grade 6 Perfection</div>
+                        <p class="text-[10px] text-slate-500 mt-2 italic">Mathematics Foundation</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-32 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-20 section-fade">
+                <div>
+                    <h2 class="text-4xl font-extrabold text-white mb-4">Development Projects</h2>
+                    <p class="text-slate-400 max-w-md">Live software implementations showcasing technical design and logic.</p>
+                </div>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Project: AURA -->
+                <div class="glass-card group rounded-[2.5rem] overflow-hidden flex flex-col section-fade border-blue-500/20">
+                    <div class="aspect-video bg-gradient-to-br from-purple-600/20 to-slate-800 p-12 flex flex-col items-center justify-center text-center">
+                        <div class="transform group-hover:scale-110 transition-transform duration-500 mb-4">
+                            <i class="fas fa-bolt text-7xl text-purple-500 opacity-50"></i>
+                        </div>
+                        <h4 class="text-white font-bold text-2xl tracking-widest uppercase">AURA</h4>
+                    </div>
+                    <div class="p-10">
+                        <div class="flex justify-between items-start mb-6">
+                            <div>
+                                <h3 class="text-2xl font-bold text-white mb-2">AURA Project</h3>
+                                <p class="text-slate-400 text-sm leading-relaxed mb-4">A high-performance web platform utilizing modern UI paradigms for a seamless digital experience.</p>
+                                <a href="https://abiyanbalooshi.github.io/AURA/" target="_blank" class="inline-flex items-center text-blue-400 hover:text-blue-300 text-sm font-bold">
+                                    Launch Project <i class="fas fa-external-link-alt ml-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="flex gap-3">
+                            <span class="px-3 py-1 bg-slate-800 text-slate-300 text-xs rounded-lg">Web Platform</span>
+                            <span class="px-3 py-1 bg-slate-800 text-slate-300 text-xs rounded-lg">GitHub Pages</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project: CineFlix -->
+                <div class="glass-card group rounded-[2.5rem] overflow-hidden flex flex-col section-fade border-blue-500/20">
+                    <div class="aspect-video bg-gradient-to-br from-blue-600/20 to-slate-800 p-12 flex flex-col items-center justify-center text-center">
+                        <div class="transform group-hover:scale-110 transition-transform duration-500 mb-4">
+                            <i class="fas fa-film text-7xl text-blue-500 opacity-50"></i>
+                        </div>
+                        <h4 class="text-white font-bold text-2xl tracking-widest uppercase">CineFlix</h4>
+                    </div>
+                    <div class="p-10">
+                        <div class="flex justify-between items-start mb-6">
+                            <div>
+                                <h3 class="text-2xl font-bold text-white mb-2">CineFlix Alpha</h3>
+                                <p class="text-slate-400 text-sm leading-relaxed mb-4">A streaming-style content discovery application featuring dynamic metadata rendering and optimized navigation.</p>
+                                <a href="https://cine-flix-alpha.vercel.app/#/" target="_blank" class="inline-flex items-center text-blue-400 hover:text-blue-300 text-sm font-bold">
+                                    Launch Project <i class="fas fa-external-link-alt ml-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="flex gap-3">
+                            <span class="px-3 py-1 bg-slate-800 text-slate-300 text-xs rounded-lg">Vercel</span>
+                            <span class="px-3 py-1 bg-slate-800 text-slate-300 text-xs rounded-lg">React</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-32 px-6 bg-slate-900/30">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20 section-fade">
+                <h2 class="text-4xl font-extrabold text-white mb-4">Technical Stack</h2>
+                <p class="text-slate-400">Tools and technologies utilized in my development workflow.</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 section-fade">
+                <div class="glass-card p-8 rounded-2xl flex flex-col items-center justify-center text-center">
+                    <i class="fab fa-html5 text-3xl text-orange-500 mb-4"></i>
+                    <span class="text-sm font-bold text-white uppercase tracking-tighter">HTML5</span>
+                </div>
+                <div class="glass-card p-8 rounded-2xl flex flex-col items-center justify-center text-center">
+                    <i class="fab fa-css3-alt text-3xl text-blue-500 mb-4"></i>
+                    <span class="text-sm font-bold text-white uppercase tracking-tighter">CSS3</span>
+                </div>
+                <div class="glass-card p-8 rounded-2xl flex flex-col items-center justify-center text-center">
+                    <i class="fab fa-js text-3xl text-yellow-500 mb-4"></i>
+                    <span class="text-sm font-bold text-white uppercase tracking-tighter">JavaScript</span>
+                </div>
+                <div class="glass-card p-8 rounded-2xl flex flex-col items-center justify-center text-center">
+                    <i class="fab fa-react text-3xl text-cyan-400 mb-4"></i>
+                    <span class="text-sm font-bold text-white uppercase tracking-tighter">React</span>
+                </div>
+                <div class="glass-card p-8 rounded-2xl flex flex-col items-center justify-center text-center">
+                    <i class="fas fa-palette text-3xl text-pink-500 mb-4"></i>
+                    <span class="text-sm font-bold text-white uppercase tracking-tighter">UI Design</span>
+                </div>
+                <div class="glass-card p-8 rounded-2xl flex flex-col items-center justify-center text-center">
+                    <i class="fas fa-terminal text-3xl text-slate-400 mb-4"></i>
+                    <span class="text-sm font-bold text-white uppercase tracking-tighter">Git</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-32 px-6">
+        <div class="max-w-4xl mx-auto glass-card p-16 rounded-[3rem] text-center section-fade border-blue-500/20 bg-blue-600/5 relative overflow-hidden">
+            <div class="absolute -top-24 -left-24 w-64 h-64 bg-blue-600/10 blur-[80px] rounded-full"></div>
+            <h2 class="text-4xl font-black text-white mb-6">Future-Ready Student.</h2>
+            <p class="text-slate-400 mb-10 text-lg">Seeking to contribute my technical innovation and academic drive to the RAK Academy community.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="tel:+971529172182" class="px-10 py-4 bg-blue-600 text-white font-bold rounded-xl shadow-lg shadow-blue-600/20">Contact Candidate</a>
+                <a href="#" class="px-10 py-4 bg-slate-800 text-white font-bold rounded-xl border border-slate-700">Download Transcript</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-slate-500 text-xs font-bold tracking-widest uppercase">
+            <p>© 2026 MUHAMMAD ABIYAN ESSA</p>
+            <div class="flex space-x-8 mt-6 md:mt-0">
+                <a href="tel:+971529172182" class="hover:text-blue-500 transition-colors">Contact Candidate</a>
+                <a href="#" class="hover:text-blue-500 transition-colors">Project Repositories</a>
+                <a href="#" class="hover:text-blue-500 transition-colors">Academic Record</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.15 });
+
+        document.querySelectorAll('.section-fade').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
